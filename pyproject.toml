@@ -1,0 +1,80 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tubetranscript"
+dynamic = ["version"]
+description = "YouTube transcripts that work from cloud servers. Drop-in fallback for youtube-transcript-api when YouTube blocks your IP, plus the TubeTranscript API client."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+authors = [{ name = "TubeTranscript" }]
+keywords = [
+  "youtube", "transcript", "subtitles", "captions", "youtube-transcript-api",
+  "RequestBlocked", "IpBlocked", "whisper", "llm", "rag",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Multimedia :: Video",
+  "Topic :: Software Development :: Libraries",
+  "Typing :: Typed",
+]
+dependencies = [
+  "requests>=2.25",
+  "urllib3>=1.26",
+  "youtube-transcript-api>=1.2,<2",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+dev = ["pytest>=7", "mypy>=1.10", "ruff>=0.6", "types-requests", "build", "twine"]
+
+[project.urls]
+Homepage = "https://tubetranscript.io/youtube-transcript-api"
+Documentation = "https://tubetranscript.io/docs/api"
+Pricing = "https://tubetranscript.io/pricing"
+Source = "https://github.com/mrkenzi/tubetranscript-python"
+Issues = "https://github.com/mrkenzi/tubetranscript-python/issues"
+Changelog = "https://github.com/mrkenzi/tubetranscript-python/blob/main/CHANGELOG.md"
+
+[project.scripts]
+tubetranscript = "tubetranscript._cli:main"
+
+[tool.hatch.version]
+path = "src/tubetranscript/_version.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tubetranscript"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "README.md", "LICENSE", "CHANGELOG.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.mypy]
+strict = true
+files = ["src"]
+
+[tool.ruff]
+target-version = "py39"
+line-length = 120
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "SIM", "S", "RUF"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101", "S105", "S106", "B017", "E501"]
