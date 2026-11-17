@@ -135,7 +135,7 @@ Report a security issue privately to support@tubetranscript.io (subject: "Securi
 
 ## Contributing
 
-Issues and pull requests are welcome at https://github.com/mrkenzi/tubetranscript-python. The package is developed alongside the TubeTranscript service and synced to this repository, so an accepted pull request is applied upstream and arrives back here in the next sync, credited to you.
+Issues and pull requests are welcome at https://github.com/TubeTranscript-IO/tubetranscript-python. The package is developed alongside the TubeTranscript service and synced to this repository, so an accepted pull request is applied upstream and arrives back here in the next sync, credited to you.
 
 ## Disclosure
 

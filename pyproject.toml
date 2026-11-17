@@ -45,9 +45,9 @@ dev = ["pytest>=7", "mypy>=1.10", "ruff>=0.6", "types-requests", "build", "twine
 Homepage = "https://tubetranscript.io/youtube-transcript-api"
 Documentation = "https://tubetranscript.io/docs/api"
 Pricing = "https://tubetranscript.io/pricing"
-Source = "https://github.com/mrkenzi/tubetranscript-python"
-Issues = "https://github.com/mrkenzi/tubetranscript-python/issues"
-Changelog = "https://github.com/mrkenzi/tubetranscript-python/blob/main/CHANGELOG.md"
+Source = "https://github.com/TubeTranscript-IO/tubetranscript-python"
+Issues = "https://github.com/TubeTranscript-IO/tubetranscript-python/issues"
+Changelog = "https://github.com/TubeTranscript-IO/tubetranscript-python/blob/main/CHANGELOG.md"
 
 [project.scripts]
 tubetranscript = "tubetranscript._cli:main"

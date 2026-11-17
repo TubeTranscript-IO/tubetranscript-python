@@ -4,7 +4,7 @@ Releases are published to PyPI by `.github/workflows/ci.yml` through **Trusted P
 
 ## Setup (once, maintainers)
 
-- PyPI trusted publisher for project `tubetranscript`: owner `mrkenzi`, repository `tubetranscript-python`, workflow `ci.yml`, environment `pypi`.
+- PyPI trusted publisher for project `tubetranscript`: owner `TubeTranscript-IO`, repository `tubetranscript-python`, workflow `ci.yml`, environment `pypi`.
 - GitHub environment `pypi`: a maintainer is a required reviewer, and only `v*` tags may deploy to it.
 
 ## Each release

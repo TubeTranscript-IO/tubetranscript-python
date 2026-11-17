@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1 (2026-11-17)
+
+- Project URLs point to the repository's new home, https://github.com/TubeTranscript-IO/tubetranscript-python (the old `mrkenzi` URLs redirect).
+
 ## 0.1.0 (2026-11-15)
 
 - `YouTubeTranscriptApi`: drop-in for youtube-transcript-api 1.2+. `fetch()` falls back to the TubeTranscript API on `RequestBlocked`, `IpBlocked`, `PoTokenRequired`, `FailedToCreateConsentCookie`, `YouTubeDataUnparsable` and `YouTubeRequestFailed`; optionally on `TranscriptsDisabled`.
